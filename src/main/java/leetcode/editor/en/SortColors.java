@@ -39,8 +39,6 @@
 
 package leetcode.editor.en;
 
-import java.util.Arrays;
-
 public class SortColors {
     public static void main(String[] args) {
         Solution solution = new SortColors().new Solution();
