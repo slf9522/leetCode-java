@@ -40,12 +40,12 @@ import java.util.stream.Collectors;
 public class Subsets {
     public static void main(String[] args) {
         Solution solution = new Subsets().new Solution();
-        System.out.println(solution.subsets(new int[]{1,2,3}));
+        System.out.println(solution.subsets(new int[]{1, 2, 3}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public List<List<Integer>> subsets(int[] nums) {
+        public List<List<Integer>> subsets0(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
             res.add(new ArrayList<>());
 
@@ -61,6 +61,23 @@ public class Subsets {
 
             return res;
         }
+
+        // 递归解法
+        public List<List<Integer>> subsets(int[] nums) {
+            List<List<Integer>> res = new ArrayList<>();
+            backtrack(nums, res, 0, new ArrayList<>());
+            return res;
+        }
+
+        private void backtrack(int[] nums, List<List<Integer>> res, int start, List<Integer> sub) {
+            res.add(sub);
+            for (int i = start; i < nums.length; i++) {
+                sub.add(nums[i]);
+                backtrack(nums, res, i + 1, new ArrayList<>(sub));
+                sub.remove(sub.size() - 1);
+            }
+        }
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 

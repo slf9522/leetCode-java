@@ -54,7 +54,7 @@ public class PermutationSequence {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public String getPermutation(int n, int k) {
+        public String getPermutation0(int n, int k) {
             List<Integer> input = IntStream.rangeClosed(1, n).boxed().collect(Collectors.toList());
             List<Integer> outPut = new ArrayList<>();
             getNext(input, k, outPut);
@@ -84,6 +84,37 @@ public class PermutationSequence {
 
         private int genPermuattion(int n) {
             return IntStream.rangeClosed(1, n).boxed().reduce(1, (sub, ele) -> sub * ele);
+        }
+
+        //        递归解法
+        public String getPermutation(int n, int k) {
+            List<Integer> input = IntStream.rangeClosed(1, n).boxed().collect(Collectors.toList());
+            List<String> output = new ArrayList<>();
+            backtrack(input, output, 0, k, n);
+            return output.stream().collect(Collectors.joining());
+        }
+
+        /**
+         * @param input 每次把input的值拿出来，放进output
+         * @param output 保存每次遍历的结果
+         * @param sum 累计直到k次
+         * @param target 目标k
+         * @param length 一次全排列的长度，其实也可以用intput和output的和
+         * @return
+         */
+        private int backtrack(List<Integer> input, List<String> output, int sum, int target, int length) {
+            if (sum == target) return sum;
+            if (output.size() == length) return sum + 1;
+
+            for (int i = 0; i < input.size(); i++) {
+                Integer val = input.remove(i);
+                output.add(val.toString());
+                sum = backtrack(input, output, sum, target, length);
+                if (sum == target) return sum;
+                output.remove(output.size() - 1);
+                input.add(i, val);
+            }
+            return sum;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

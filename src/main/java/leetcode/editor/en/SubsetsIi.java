@@ -30,7 +30,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 /**
  * https://leetcode.com/problems/subsets-ii/discuss/30168/C%2B%2B-solution-and-explanation
@@ -40,16 +39,16 @@ import java.util.stream.IntStream;
 public class SubsetsIi {
     public static void main(String[] args) {
         Solution solution = new SubsetsIi().new Solution();
-        System.out.println(solution.subsetsWithDup(new int[]{1,2,2}));
+        System.out.println(solution.subsetsWithDup(new int[]{1, 2, 2}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public List<List<Integer>> subsetsWithDup(int[] nums) {
+        public List<List<Integer>> subsetsWithDup0(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
             res.add(new ArrayList<>());
             Arrays.sort(nums);
-            for (int i = 0; i < nums.length;) {
+            for (int i = 0; i < nums.length; ) {
                 int finalI = i;
                 int cnt = 0;
                 while (i + cnt < nums.length && nums[i + cnt] == nums[i]) cnt++;
@@ -58,7 +57,7 @@ public class SubsetsIi {
 
 //                注意while中是针对上一轮res的结果进行操作，所以需要临时的subRes存储结果
                 List<List<Integer>> subRes = new ArrayList<>();
-                while (cnt> 0) {
+                while (cnt > 0) {
                     int finalCnt = cnt;
                     List<List<Integer>> next = res.stream().map(l -> {
                         List<Integer> copy = new ArrayList<>(l);
@@ -71,6 +70,23 @@ public class SubsetsIi {
                 res.addAll(subRes);
             }
             return res;
+        }
+
+        // 递归解法
+        public List<List<Integer>> subsetsWithDup(int[] nums) {
+            List<List<Integer>> res = new ArrayList<>();
+            Arrays.sort(nums);
+            backtrack(nums, res, 0, new ArrayList<>());
+            return res;
+        }
+
+        private void backtrack(int[] nums, List<List<Integer>> res, int start, List<Integer> sub) {
+            res.add(sub);
+            for (int i = start; i < nums.length; i++) {
+                if (i > start && nums[i] == nums[start]) continue;
+                backtrack(nums, res, i + 1, new ArrayList<>(sub));
+                sub.remove(sub.size() - 1);
+            }
         }
 
     }
