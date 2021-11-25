@@ -52,21 +52,17 @@
 package leetcode.editor.en;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// https://leetcode.com/problems/range-frequency-queries/discuss/1589019/Java-or-Binary-Search-or-Log(n)-for-every-query
 public class RangeFrequencyQueries {
-    public static void main(String[] args) {
-        RangeFreqQuery obj = new RangeFreqQuery(new int[]{3, 4, 5, 3, 3, 2, 2, 2, 5, 4});
-        System.out.println(obj.query(5, 6, 5));
-    }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class RangeFreqQuery {
         Map<Integer, List<Integer>> index = new HashMap<>();
-        Map<String, Integer> cache = new HashMap<>();
 
         public RangeFreqQuery(int[] arr) {
             for (int i = 0; i < arr.length; i++) {
@@ -82,30 +78,17 @@ public class RangeFrequencyQueries {
 
         //        2 0，1
         public int query(int left, int right, int value) {
-            String c = String.join(",", String.valueOf(left), String.valueOf(right), String.valueOf(value));
-            if (cache.containsKey(c)) return cache.get(c);
 
             List<Integer> tmp = index.get(value);
             if (tmp == null) return 0;
-            Integer[] tmpa = tmp.stream().toArray(Integer[]::new);
-            int l = Arrays.binarySearch(tmpa, left);
-            int r = Arrays.binarySearch(tmpa, right);
-            int res = 0;
-            if (l >= 0 && r >= 0) {
-                res = r - l + 1;
-            } else if (l < 0 && r >= 0) {
-                l = -l - 1 - 1;
-                res = r - l;
-            } else if (l >= 0 && r < 0) {
-                r = -r - 1;
-                res = r - l;
-            } else {
-                l = -l - 1 - 1;
-                r = -r - 1;
-                res = r - l - 1;
-            }
-            cache.put(c, res);
-            return res;
+            // 不需要转成array再二分
+            int s = Collections.binarySearch(tmp, left);
+            int e = Collections.binarySearch(tmp, right);
+            // 如果不存在，返回比left大的第一个元素
+            if (s < 0) s = (s + 1) * (-1);
+            // 如果不存在，返回比right大的第一个元素，但是还要再减去1
+            if (e < 0) e = (e + 2) * (-1);
+            return e - s + 1;
         }
     }
 
