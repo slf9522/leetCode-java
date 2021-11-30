@@ -55,6 +55,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.TreeMap;
 
+/**
+ * 给出一组【开始节点、结束节点、权重的数组】找出两端使得不重合，而且权重之和最大
+ * 解法1：对于以events[i]开始的最大权重组合，Map<Integer, Integer> 记录大于key的最大权重
+ *
+ */
 public class TwoBestNonOverlappingEvents {
     public static void main(String[] args) {
 

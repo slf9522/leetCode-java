@@ -60,6 +60,9 @@ public class TwoSum {
 
     //leetcode submit region begin(Prohibit modification and deletion)
 
+    /**
+     * 找到数组中sum为target的数字
+     */
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             Map<Integer, Integer> numMap = new HashMap<>();

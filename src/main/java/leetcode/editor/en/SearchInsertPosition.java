@@ -41,18 +41,36 @@ import java.util.Arrays;
 public class SearchInsertPosition {
     public static void main(String[] args) {
         Solution solution = new SearchInsertPosition().new Solution();
-        System.out.println(solution.searchInsert(new int[]{1, 3, 5, 6}, 7));
+        System.out.println(solution.searchInsert(new int[]{1, 3, 5, 6}, 0));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public int searchInsert(int[] nums, int target) {
+        public int searchInsert2(int[] nums, int target) {
             int tmp = Arrays.binarySearch(nums, target);
             if (tmp < 0) {
                 return -tmp - 1;
             } else {
                 return tmp;
             }
+        }
+
+        // 寻找target可以插入的位置
+        public int searchInsert(int[] nums, int target) {
+            int i = 0, j = nums.length;
+            while (i < j) {
+                int mid = i + (j - i) / 2;
+                if (nums[mid] == target) {
+                    return mid;
+                    // nums[i]可能比target大
+                } else if (nums[mid] < target) {
+                    i = mid + 1;
+                } else {
+//                    大了就不移动位置
+                    j = mid;
+                }
+            }
+            return j;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

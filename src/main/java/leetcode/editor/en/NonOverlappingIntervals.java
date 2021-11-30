@@ -57,7 +57,7 @@ public class NonOverlappingIntervals {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         // 边界条件比较敏感！！
-        public int eraseOverlapIntervals(int[][] intervals) {
+        public int eraseOverlapInterval(int[][] intervals) {
             // 先按照start升序，再按照end升序
             Arrays.sort(intervals, (a, b) -> a[0] - b[0] == 0 ? a[1] - b[1] : a[0] - b[0]);
             // 统计可以加进去的，初始值为1
@@ -75,7 +75,7 @@ public class NonOverlappingIntervals {
                 } else if (preEnd > e[0] && preEnd <= e[1]) {
                     continue;
 //                    更新到下一个分组，注意end即使一样也要更新start，方便下一个分组遍历
-                } else if (preEnd >= e[1]) {
+                } else if (preEnd > e[1]) {
                     preStart = e[0];
                     preEnd = e[1];
                 } else {
@@ -86,6 +86,24 @@ public class NonOverlappingIntervals {
             }
             return intervals.length - cnt;
         }
+
+        // 按照end排序，则只要比较start即可
+        public int eraseOverlapIntervals(int[][] intervals) {
+            // 先按照start升序，再按照end升序
+            Arrays.sort(intervals, (a, b) -> a[1] - b[1] == 0 ? a[0] - b[0] : a[1] - b[1]);
+            // 统计可以加进去的，初始值为1
+            int cnt = 1;
+            int preEnd = intervals[0][1];
+            for (int i = 1; i < intervals.length; i++) {
+                int[] e = intervals[i];
+                if (preEnd <= e[0]) {
+                    preEnd = e[1];
+                    cnt++;
+                }
+            }
+            return intervals.length - cnt;
+        }
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
