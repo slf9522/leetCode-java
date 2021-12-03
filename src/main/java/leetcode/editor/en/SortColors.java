@@ -42,7 +42,7 @@ package leetcode.editor.en;
 public class SortColors {
     public static void main(String[] args) {
         Solution solution = new SortColors().new Solution();
-        solution.sortColors(new int[]{1,2,0});
+        solution.sortColors(new int[]{1, 2, 0});
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

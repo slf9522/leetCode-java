@@ -58,7 +58,7 @@ public class AddTwoNumbers {
      * ListNode(int val) { this.val = val; }
      * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      * }
-     *
+     * <p>
      * 合并数组链表求和
      */
     class Solution {
@@ -87,7 +87,7 @@ public class AddTwoNumbers {
                     l2 = l2.next;
                 }
             }
-            if(flag!=0){
+            if (flag != 0) {
                 tail.next = new ListNode(flag);
             }
             return head.next;

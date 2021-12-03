@@ -45,7 +45,7 @@ import java.util.Map;
 public class GroupAnagrams {
     public static void main(String[] args) {
         Solution solution = new GroupAnagrams().new Solution();
-        System.out.println(solution.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
+        System.out.println(solution.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

@@ -55,7 +55,7 @@ import java.util.Collections;
 public class RotateImage {
     public static void main(String[] args) {
         Solution solution = new RotateImage().new Solution();
-        solution.rotate(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
+        solution.rotate(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -87,8 +87,8 @@ public class RotateImage {
             int l = matrix.length;
             while (j < l / 2) {
                 int tmp = matrix[j][i];
-                matrix[j][i] = matrix[l-1-j][i];
-                matrix[l-1-j][i] = tmp;
+                matrix[j][i] = matrix[l - 1 - j][i];
+                matrix[l - 1 - j][i] = tmp;
                 j++;
             }
         }

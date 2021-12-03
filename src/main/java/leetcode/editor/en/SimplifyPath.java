@@ -81,7 +81,7 @@ public class SimplifyPath {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-//        todo: stack 和deque的初始化方式
+        //        todo: stack 和deque的初始化方式
         public String simplifyPath(String path) {
             List<String> splitPath =
                     Arrays.stream(path.split("/")).filter(s -> !s.isEmpty()).collect(Collectors.toList());
