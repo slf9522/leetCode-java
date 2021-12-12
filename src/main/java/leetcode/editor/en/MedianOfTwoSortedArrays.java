@@ -85,7 +85,7 @@ public class MedianOfTwoSortedArrays {
                 if (even && index == mid) {
                     res = (pre + Math.min(ii, jj)) / 2.0;
                     break;
-                } else if(index == mid) {
+                } else if (index == mid) {
                     res = Math.min(ii, jj);
                     break;
                 }

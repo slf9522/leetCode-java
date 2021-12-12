@@ -49,9 +49,10 @@ public class PalindromePartitioning {
 
         /**
          * 递归
+         *
          * @param input 单元素的输入
-         * @param res 结果
-         * @param left 回文的左侧
+         * @param res   结果
+         * @param left  回文的左侧
          * @param right 回文的右侧
          */
         private void backTack(List<String> input, List<List<String>> res, int left, int right) {

@@ -65,7 +65,7 @@ public class PalindromeNumber {
             int tmp = x;
             int pali = 0;
             while (tmp != 0) {
-                if (pali > Integer.MAX_VALUE / 10){
+                if (pali > Integer.MAX_VALUE / 10) {
                     return false;
                 }
                 pali = pali * 10 + tmp % 10;

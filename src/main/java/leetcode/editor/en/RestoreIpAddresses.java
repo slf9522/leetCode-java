@@ -63,7 +63,7 @@ public class RestoreIpAddresses {
             }
 
             for (int i = 1; i <= 3; i++) {
-                if (index +i > s.length()) break;
+                if (index + i > s.length()) break;
                 String subStr = s.substring(index, index + i);
                 if (valid(subStr)) {
                     String tmp = cnt == 3 ? "" : ".";
@@ -73,9 +73,7 @@ public class RestoreIpAddresses {
         }
 
         public boolean valid(String s) {
-            if (s.length() > 3 || s.length() == 0 || (s.charAt(0) == '0' && s.length() > 1) || Integer.parseInt(s) > 255)
-                return false;
-            return true;
+            return s.length() <= 3 && s.length() != 0 && (s.charAt(0) != '0' || s.length() <= 1) && Integer.parseInt(s) <= 255;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

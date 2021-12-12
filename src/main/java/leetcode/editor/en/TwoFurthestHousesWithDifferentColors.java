@@ -62,14 +62,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *  给一个list，找到不同颜色距离的最远距离
- *  me：map存每个颜色第一次出现的index，list存每个颜色与<index下标所有颜色距离最小值
- *  https://leetcode.com/problems/two-furthest-houses-with-different-colors/discuss/1589141/JavaC%2B%2BPython-O(n)-Solution
- *  方法1:
- *  head：移动tail直到颜色不同
- *  tail:移动head直到颜色不同
- *  方法2:
- *  遍历列表，与首位元素比较
+ * 给一个list，找到不同颜色距离的最远距离
+ * me：map存每个颜色第一次出现的index，list存每个颜色与<index下标所有颜色距离最小值
+ * https://leetcode.com/problems/two-furthest-houses-with-different-colors/discuss/1589141/JavaC%2B%2BPython-O(n)
+ * -Solution
+ * 方法1:
+ * head：移动tail直到颜色不同
+ * tail:移动head直到颜色不同
+ * 方法2:
+ * 遍历列表，与首位元素比较
  */
 public class TwoFurthestHousesWithDifferentColors {
     public static void main(String[] args) {

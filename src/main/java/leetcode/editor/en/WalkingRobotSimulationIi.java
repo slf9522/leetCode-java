@@ -86,7 +86,7 @@ public class WalkingRobotSimulationIi {
         private int face = 0;
         private int posx = 0;
         private int posy = 0;
-        private String[] navi = new String[]{
+        private final String[] navi = new String[]{
                 "East", "North", "West", "South"
         };
         private int cycle = 0;

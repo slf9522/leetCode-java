@@ -37,7 +37,7 @@ public class LongestCommonPrefix {
     public static void main(String[] args) {
 
         Solution solution = new LongestCommonPrefix().new Solution();
-        System.out.println(solution.longestCommonPrefix(new String[]{"flower","flow","flight"}));
+        System.out.println(solution.longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

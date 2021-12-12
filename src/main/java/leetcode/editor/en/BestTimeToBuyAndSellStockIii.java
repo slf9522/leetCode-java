@@ -60,14 +60,14 @@ package leetcode.editor.en;
 
 
 /**
- * 状态机的方案：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/149383/Easy-DP-solution-using-state-machine-O(n)-time-complexity-O(1)-space-complexity
+ * 状态机的方案：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/149383/Easy-DP-solution-using
+ * -state-machine-O(n)-time-complexity-O(1)-space-complexity
  * 因为最多交易2次，所以状态流转确定，只要依次递推相关状态就可以了，复杂度O(kn)，k表示至多交易k次
- *
  */
 public class BestTimeToBuyAndSellStockIii {
     public static void main(String[] args) {
         Solution solution = new BestTimeToBuyAndSellStockIii().new Solution();
-        System.out.println(solution.maxProfit(new int[]{3,3,5,0,0,3,1,4}));
+        System.out.println(solution.maxProfit(new int[]{3, 3, 5, 0, 0, 3, 1, 4}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -75,12 +75,12 @@ public class BestTimeToBuyAndSellStockIii {
 
         public int maxProfit2(int[] prices) {
             if (prices.length == 0) return 0;
-            int s0, s1=-prices[0], s2=Integer.MIN_VALUE, s3=Integer.MIN_VALUE, s4=Integer.MIN_VALUE;
+            int s0, s1 = -prices[0], s2 = Integer.MIN_VALUE, s3 = Integer.MIN_VALUE, s4 = Integer.MIN_VALUE;
             for (int i = 1; i < prices.length; i++) {
                 s1 = Math.max(s1, -prices[i]);
-                s2 = Math.max(s2, s1+prices[i]); // 也可以买入马上卖出
-                s3 = Math.max(s3, s2-prices[i]);
-                s4 = Math.max(s4, s3+prices[i]);
+                s2 = Math.max(s2, s1 + prices[i]); // 也可以买入马上卖出
+                s3 = Math.max(s3, s2 - prices[i]);
+                s4 = Math.max(s4, s3 + prices[i]);
             }
             return Math.max(s4, 0);
         }
@@ -93,14 +93,14 @@ public class BestTimeToBuyAndSellStockIii {
             // f[0, ii] = 0; 0 times transation makes 0 profit 初始化，0次交易在所有价格处收益为0
             int[][] f = new int[3][prices.length];
 
-            int k =2;
-            int maxPro=0;
+            int k = 2;
+            int maxPro = 0;
             for (int kk = 1; kk <= k; kk++) {
-                int tmpMax = f[k-1][0]-prices[0];
+                int tmpMax = f[k - 1][0] - prices[0];
                 for (int ii = 1; ii < prices.length; ii++) {
-                    f[kk][ii] =Math.max(f[kk][ii-1], prices[ii] + tmpMax);
+                    f[kk][ii] = Math.max(f[kk][ii - 1], prices[ii] + tmpMax);
 //                    只和[kk-1][ii]有关，所以不需要n次遍历
-                    tmpMax = Math.max(tmpMax,f[kk-1][ii]-prices[ii]);
+                    tmpMax = Math.max(tmpMax, f[kk - 1][ii] - prices[ii]);
                     maxPro = Math.max(maxPro, f[kk][ii]);
                 }
             }

@@ -95,9 +95,9 @@ public class PermutationSequence {
         }
 
         /**
-         * @param input 每次把input的值拿出来，放进output
+         * @param input  每次把input的值拿出来，放进output
          * @param output 保存每次遍历的结果
-         * @param sum 累计直到k次
+         * @param sum    累计直到k次
          * @param target 目标k
          * @param length 一次全排列的长度，其实也可以用intput和output的和
          * @return
