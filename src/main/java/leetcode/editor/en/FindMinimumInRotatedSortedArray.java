@@ -60,7 +60,7 @@ package leetcode.editor.en;
 public class FindMinimumInRotatedSortedArray {
     public static void main(String[] args) {
         Solution solution = new FindMinimumInRotatedSortedArray().new Solution();
-        System.out.println(solution.findMin(new int[]{11, 13, 15, 17}));
+        System.out.println(solution.findMin(new int[]{4, 5, 6, 7, 0, 1, 2}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -71,8 +71,11 @@ public class FindMinimumInRotatedSortedArray {
             while (left < right) {
                 int mid = (left + right) / 2;
                 int nL = nums[left], nR = nums[right], nM = nums[mid];
-                if (nM < nR) right = mid;
-                if (nM > nL) left = mid;
+                if (nM < nR) {
+                    right = mid;
+                    continue;
+                }
+                if (nM > nL) left = mid + 1;
             }
             return nums[right];
         }

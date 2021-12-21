@@ -178,11 +178,8 @@ public class WeekBi67 {
         }
 
         public boolean diff(int[] b1, int[] b2) {
-            if (Math.pow(b1[0] - b2[0], 2) + Math.pow(b1[1] - b2[1], 2) <= Math.pow(b1[2], 2)
-                    || Math.pow(b1[0] - b2[0], 2) + Math.pow(b1[1] - b2[1], 2) <= Math.pow(b2[2], 2)) {
-                return true;
-            }
-            return false;
+            return Math.pow(b1[0] - b2[0], 2) + Math.pow(b1[1] - b2[1], 2) <= Math.pow(b1[2], 2)
+                    || Math.pow(b1[0] - b2[0], 2) + Math.pow(b1[1] - b2[1], 2) <= Math.pow(b2[2], 2);
         }
     }
 
