@@ -103,7 +103,6 @@ public class NonOverlappingIntervals {
             }
             return intervals.length - cnt;
         }
-
     }
 //leetcode submit region end(Prohibit modification and deletion)
 

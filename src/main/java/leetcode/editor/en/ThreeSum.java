@@ -51,38 +51,63 @@ public class ThreeSum {
     class Solution {
         public List<List<Integer>> threeSum(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
-            // 利用map加速查找，同时记录个数，防止重复
-            Map<Integer, Integer> uniqCnt = new HashMap<>();
 
-            for (int num : nums) {
-                int cnt = uniqCnt.getOrDefault(num, 0);
-                uniqCnt.put(num, ++cnt);
-            }
-            List<Integer> uniqNums = uniqCnt.keySet().stream().sorted().collect(Collectors.toList());
-
-            for (int i = 0; i < uniqNums.size(); i++) {
-                int ni = uniqNums.get(i);
-                if (ni * 3 == 0 && uniqCnt.get(ni) >= 3) {
-                    res.add(Arrays.asList(ni, ni, ni));
-                }
-                for (int j = i + 1; j < uniqNums.size(); j++) {
-                    int nj = uniqNums.get(j);
-                    if (ni * 2 + nj == 0 && uniqCnt.get(ni) >= 2) {
-                        res.add(Arrays.asList(ni, ni, nj));
-                    }
-                    if (ni + nj * 2 == 0 && uniqCnt.get(nj) >= 2) {
-                        res.add(Arrays.asList(ni, nj, nj));
-                    }
-                    int target = -ni - nj;
-                    // 按顺序遍历防止重复
-                    if (target > nj && uniqCnt.containsKey(target)) {
-                        res.add(Arrays.asList(ni, nj, target));
+            Arrays.sort(nums);
+            for (int i = 0; i < nums.length - 2; i++) {
+                if (i == 0 || nums[i] != nums[i + 1]) {
+                    int lo = i + 1, hi = nums.length - 1, sum = -nums[i];
+                    while (lo < hi) {
+                        if (nums[lo] + nums[hi] == sum) {
+                            res.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
+                            while (lo < hi && nums[lo] == nums[lo + 1]) lo++;
+                            while (lo < hi && nums[hi] == nums[hi - 1]) hi--;
+                            lo++;
+                            hi--;
+                        } else if (nums[lo] + nums[hi] < sum) {
+                            lo++;
+                        } else {
+                            hi--;
+                        }
                     }
                 }
             }
-
             return res;
         }
+    }
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        // 利用map加速查找，同时记录个数，防止重复
+        Map<Integer, Integer> uniqCnt = new HashMap<>();
+
+        for (int num : nums) {
+            int cnt = uniqCnt.getOrDefault(num, 0);
+            uniqCnt.put(num, ++cnt);
+        }
+        List<Integer> uniqNums = uniqCnt.keySet().stream().sorted().collect(Collectors.toList());
+
+        for (int i = 0; i < uniqNums.size(); i++) {
+            int ni = uniqNums.get(i);
+            if (ni * 3 == 0 && uniqCnt.get(ni) >= 3) {
+                res.add(Arrays.asList(ni, ni, ni));
+            }
+            for (int j = i + 1; j < uniqNums.size(); j++) {
+                int nj = uniqNums.get(j);
+                if (ni * 2 + nj == 0 && uniqCnt.get(ni) >= 2) {
+                    res.add(Arrays.asList(ni, ni, nj));
+                }
+                if (ni + nj * 2 == 0 && uniqCnt.get(nj) >= 2) {
+                    res.add(Arrays.asList(ni, nj, nj));
+                }
+                int target = -ni - nj;
+                // 按顺序遍历防止重复
+                if (target > nj && uniqCnt.containsKey(target)) {
+                    res.add(Arrays.asList(ni, nj, target));
+                }
+            }
+        }
+
+        return res;
     }
 //leetcode submit region end(Prohibit modification and deletion)
 

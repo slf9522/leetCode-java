@@ -93,6 +93,7 @@ public class ValidParentheses {
             }
             return stack.size() == 0;
         }
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
