@@ -26,17 +26,51 @@
 
 package leetcode.editor.en;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Permutations {
     public static void main(String[] args) {
         Solution solution = new Permutations().new Solution();
+        System.out.println(solution.permute(new int[]{1, 2, 3}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public List<List<Integer>> permute(int[] nums) {
-            return null;
+            List<Integer> list = Arrays.stream(nums)
+                    .sorted().boxed()
+                    .collect(Collectors.toCollection(LinkedList::new));
+
+            return permute(list);
+        }
+
+        public List<List<Integer>> permute(List<Integer> list) {
+            List<List<Integer>> res = new LinkedList<>();
+
+            if (list.size() == 1) {
+                List<Integer> sub = new LinkedList<>();
+                sub.add(list.get(0));
+                res.add(sub);
+                return res;
+            }
+
+            for (int i = 0; i < list.size(); i++) {
+                int n = list.remove(i);
+                List<List<Integer>> subRes = permute(list);
+
+                subRes.forEach(e -> {
+                    e.add(n);
+                    res.add(e);
+                });
+
+                list.add(i, n);
+            }
+            return res;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

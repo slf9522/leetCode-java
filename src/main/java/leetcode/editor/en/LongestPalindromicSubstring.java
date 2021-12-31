@@ -53,7 +53,7 @@ public class LongestPalindromicSubstring {
     public static void main(String[] args) {
 
         Solution solution = new LongestPalindromicSubstring().new Solution();
-        System.out.println(solution.longestPalindrome("aacabdkacaa"));
+        System.out.println(solution.longestPalindrome("aaaa"));
     }
 
     // 1 2 3
@@ -62,7 +62,7 @@ public class LongestPalindromicSubstring {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public String longestPalindrome(String s) {
+        public String longestPalindrome2(String s) {
             int l = s.length();
             int[][] dp = new int[l][l];
             for (int i = 0; i < l; i++) {
@@ -98,6 +98,35 @@ public class LongestPalindromicSubstring {
             }
             return s.substring(start, start + maxdp);
         }
+
+        public String longestPalindrome(String s) {
+            String res = s.substring(0, 1);
+
+            boolean[] dp = new boolean[s.length()];
+            dp[0] = true;
+
+            for (int i = 1; i < s.length(); i++) {
+                dp[i] = true;
+                for (int j = 0; j < i; j++) {
+                    if (s.charAt(j) == s.charAt(i)) {
+                        if (j + 1 == i || j + 2 == i) {
+                            res = res.length() < s.substring(j, i + 1).length() ? s.substring(j, i + 1) : res;
+                            dp[j] = true;
+                        } else if (dp[j + 1]) {
+                            res = res.length() < s.substring(j, i + 1).length() ? s.substring(j, i + 1) : res;
+                            dp[j] = true;
+                        } else {
+                            dp[j] = false;
+                        }
+                    } else {
+                        dp[j] = false;
+                    }
+                }
+            }
+            return res;
+        }
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
