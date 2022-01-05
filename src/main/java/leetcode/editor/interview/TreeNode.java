@@ -1,4 +1,4 @@
-package leetcode.editor.meeting;
+package leetcode.editor.interview;
 
 /**
  * @ClassName TreeNode

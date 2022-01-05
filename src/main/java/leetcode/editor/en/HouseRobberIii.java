@@ -39,9 +39,16 @@
 
 package leetcode.editor.en;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.Map;
+
 public class HouseRobberIii {
     public static void main(String[] args) {
         Solution solution = new HouseRobberIii().new Solution();
+        System.out.println(solution.rob(new TreeNode(3, new TreeNode(2, null, new TreeNode(3)), new TreeNode(3, null,
+                new TreeNode(1)))));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 
@@ -62,7 +69,38 @@ public class HouseRobberIii {
      */
     class Solution {
         public int rob(TreeNode root) {
+            Deque<TreeNode> deque = new ArrayDeque<>();
+            deque.addLast(root);
 
+            Map<TreeNode, Integer> rob = new HashMap<>();
+            Map<TreeNode, Integer> unRob = new HashMap<>();
+            rob.put(root, root.val);
+            unRob.put(root, 0);
+
+            int res = root.val;
+            while (deque.size() > 0) {
+                int size = deque.size();
+                int subRes = 0;
+                for (int i = 0; i < size; i++) {
+                    TreeNode tmp = deque.removeFirst();
+                    res = Math.max(res, rob.get(tmp));
+                    res = Math.max(res, unRob.get(tmp));
+
+                    if (tmp.left != null) {
+                        deque.add(tmp.left);
+                        rob.put(tmp.left, unRob.get(tmp) + tmp.left.val);
+                        unRob.put(tmp.left, rob.get(tmp));
+                    }
+
+                    if (tmp.right != null) {
+                        deque.add(tmp.right);
+                        rob.put(tmp.right, unRob.get(tmp) + tmp.right.val);
+                        unRob.put(tmp.right, rob.get(tmp));
+                    }
+
+                }
+            }
+            return res;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

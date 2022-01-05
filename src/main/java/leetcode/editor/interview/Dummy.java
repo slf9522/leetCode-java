@@ -1,4 +1,4 @@
-package leetcode.editor.meeting;
+package leetcode.editor.interview;
 
 public class Dummy {
     public long a = 10;

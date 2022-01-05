@@ -1,4 +1,4 @@
-package leetcode.editor.meeting;
+package leetcode.editor.interview;
 
 import com.sun.tools.javac.util.Pair;
 

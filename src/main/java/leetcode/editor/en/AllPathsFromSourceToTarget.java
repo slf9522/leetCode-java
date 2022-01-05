@@ -73,7 +73,7 @@ public class AllPathsFromSourceToTarget {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+        public List<List<Integer>> allPathsSourceTarget2(int[][] graph) {
             Map<Integer, List<List<Integer>>> buffer = new HashMap<>();
             allPathsSourceTarget(graph, 0, buffer);
             return buffer.get(0);
@@ -111,6 +111,39 @@ public class AllPathsFromSourceToTarget {
 
         }
 
+
+        public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+            int n = graph.length;
+            List<List<Integer>> res = new ArrayList<>();
+            List<List<Integer>> reG = new ArrayList<>();
+
+            for (int i = 0; i < graph.length; i++) {
+                reG.add(i, new ArrayList<>());
+            }
+
+            for (int i = 0; i < graph.length; i++) {
+                for (int v : graph[i]) {
+                    reG.get(v).add(i);
+                }
+            }
+
+            for (int i = 0; i < reG.get(n - 1).size(); i++) {
+                List<Integer> path = new ArrayList<>();
+                path.add(n - 1);
+                dfs(reG, res, reG.get(n - 1).get(i), path);
+            }
+
+            return res;
+        }
+
+        private void dfs(List<List<Integer>> reG, List<List<Integer>> res, int n, List<Integer> path) {
+            for (int i = 0; i < reG.get(n).size(); i++) {
+                path.add(reG.get(n).get(i));
+                dfs(reG, res, reG.get(n).get(i), path);
+                path.remove(reG.get(n).get(i));
+            }
+            res.add(new ArrayList<>(path));
+        }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
