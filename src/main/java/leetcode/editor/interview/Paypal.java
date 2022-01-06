@@ -1,12 +1,17 @@
 package leetcode.editor.interview;
 
 
-
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Deque;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+
 import org.openjdk.jol.vm.VM;
+
 /**
  * ø
  *
@@ -49,6 +54,7 @@ public class Paypal {
 
     /**
      * 求一颗树里面两个节点的最大距离
+     *
      * @param root
      * @return
      */
@@ -81,6 +87,7 @@ public class Paypal {
 
     /**
      * 判断integer变量值传递的问题
+     *
      * @param a
      * @return
      */
@@ -91,6 +98,56 @@ public class Paypal {
         return a;
     }
 
+    // 迭代器和函数式编程
+    public void testIterator(String[] args) {
+        List<String> models = new ArrayList<String>();
+        models.add("model1");
+        models.add("model2");
+        models.add("model3");
+        models.add("model4");
 
+        // 1、报错java.util.ConcurrentModificationException
+//        for (String s : models) {
+//            if (s.equals("model2")) {
+//                models.remove(s);
+//            }
+//        }
+        // 2 正确运行
+        models.removeIf(s -> s.equals("model2"));
 
+        // 3 迭代器
+        for (Iterator<String> it = models.iterator(); it.hasNext(); ) {
+            String s = it.next();
+            if (s.equals("model2") || s.equals("model3")) {
+                models.remove(s);
+//                it.remove();
+            }
+        }
+
+        System.out.println(models);
+    }
+
+    // 懒加载
+    public void lazyCalculator(String[] args) {
+        Long uid = 1L;
+        User user = new User();
+        user.setUid(uid);
+        // departmentService 是一个rpc调用
+        user.setDepartment(Lazy.of(() -> String.valueOf(uid)));
+
+        Lazy<String> departmentLazy = user.department;
+        Lazy<Long> supervisorLazy = user.supervisor;
+
+        Lazy<Lazy<Set<String>>> permissions = departmentLazy.map(department ->
+                supervisorLazy.map(supervisor -> getPermissions(department, supervisor)));
+
+        Lazy<Set<String>> permissions2 = departmentLazy.flatMap(department ->
+                supervisorLazy.map(supervisor -> getPermissions(department, supervisor))
+        );
+
+    }
+
+    Set<String> getPermissions(String department, Long supervisor) {
+        return new HashSet<>();
+    }
 }
