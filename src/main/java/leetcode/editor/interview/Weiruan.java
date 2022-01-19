@@ -35,7 +35,7 @@ public class Weiruan {
 
         matrix[sx][sy] = Math.min(Math.min(v1, v2), Math.min(v3, v4)) + 1;
 
-        int res =Integer.MAX_VALUE;
+        int res = Integer.MAX_VALUE;
         if (matrix[sx][sy - 1] != 0) res = Math.min(res, findEndv2(matrix, new int[]{sx, sy - 1}, end));
         if (matrix[sx + 1][sy] != 0) res = Math.min(res, findEndv2(matrix, new int[]{sx + 1, sy}, end));
         if (matrix[sx][sy + 1] != 0) res = Math.min(res, findEndv2(matrix, new int[]{sx, sy + 1}, end));
@@ -44,10 +44,15 @@ public class Weiruan {
         return res;
     }
 
+    //2、一颗bst，其中两个元素交换过，把这颗树还原
+
+
+    //3、"a(b(cd)e)f" 从内向外递归反转括号里的字符串
+
     public static void main(String[] args) {
         List<Pair<Integer, Integer>> stack = new ArrayList<>();
         int k = 0;
-        while(stack.size()>0){
+        while (stack.size() > 0) {
 
         }
     }
