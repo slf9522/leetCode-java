@@ -1,6 +1,5 @@
 package leetcode.editor.interview;
 
-import com.sun.tools.javac.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,11 +49,11 @@ public class Weiruan {
     //3、"a(b(cd)e)f" 从内向外递归反转括号里的字符串
 
     public static void main(String[] args) {
-        List<Pair<Integer, Integer>> stack = new ArrayList<>();
-        int k = 0;
-        while (stack.size() > 0) {
-
-        }
+//        List<Pair<Integer, Integer>> stack = new ArrayList<>();
+//        int k = 0;
+//        while (stack.size() > 0) {
+//
+//        }
     }
 
 

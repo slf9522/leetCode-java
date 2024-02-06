@@ -27,8 +27,6 @@
 
 package leetcode.editor.en;
 
-import com.sun.tools.javac.util.Pair;
-import com.sun.tools.javac.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
