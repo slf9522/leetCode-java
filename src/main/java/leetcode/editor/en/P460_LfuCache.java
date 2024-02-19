@@ -89,9 +89,9 @@ import java.util.*;
  * @date 2024-02-06 11:19:49
  */
 public class P460_LfuCache {
-    public static void main(String[] args) {
+    public void main(String[] args) {
         //测试代码
-        P460_LfuCache.LFUCache cache = new P460_LfuCache.LFUCache(2);
+        LFUCache cache = new LFUCache(2);
         cache.put(1, 1);
         cache.put(2, 2);
         System.out.println(cache.get(1));
