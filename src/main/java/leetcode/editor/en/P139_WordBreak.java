@@ -48,37 +48,61 @@
 package leetcode.editor.en;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Word Break
+ *
  * @author JX
  * @date 2024-02-26 10:57:09
  */
-public class P139_WordBreak{
-	 public static void main(String[] args) {
-	 	 //测试代码
-	 	 Solution solution = new P139_WordBreak().new Solution();
-		  solution.wordBreak("leetcode", Arrays.asList("leet", "code"));
-	 }
-	 
-//力扣代码
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public boolean wordBreak(String s, List<String> wordDict) {
-		if (s.isEmpty()) return true;
-		boolean flag = false;
-
-		for (int i = 0; i <= s.length(); i++) {
-			String sub = s.substring(0,i);
-			if (wordDict.contains(sub)){
-				flag = flag | wordBreak(s.substring(i), wordDict);
-				if(flag) return true;
-			}
-		}
-		return flag;
+public class P139_WordBreak {
+    public static void main(String[] args) {
+        //测试代码
+        Solution solution = new P139_WordBreak().new Solution();
+        System.out.println(solution.wordBreak("leetcode", Arrays.asList("leet", "code")));
     }
-}
+
+    //力扣代码
+//leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+
+        public boolean wordBreak(String s, List<String> wordDict) {
+            int l = s.length();
+            boolean[] dp = new boolean[l + 1];
+            dp[0] = true;
+            Set<String> set = new HashSet<>(wordDict);
+            for (int i = 1; i < l + 1; i++) {
+                for (int j = i - 1; j >= 0; j--) {
+                    if (set.contains(s.substring(j, i))) {
+                        dp[i] = dp[i] | dp[j];
+                    }
+                }
+            }
+            return dp[l];
+        }
+
+
+        public boolean wordBreak2(String s, List<String> wordDict) {
+            boolean res = false;
+
+            for (int i = 0; i < wordDict.size(); i++) {
+                String sub = wordDict.get(i);
+                if (s.startsWith(sub)) {
+                    if (s.equals(sub)) {
+                        return true;
+                    }
+                    res = res | wordBreak2(s.substring(sub.length()), wordDict);
+                }
+                if (res) return true;
+            }
+            return false;
+        }
+
+
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

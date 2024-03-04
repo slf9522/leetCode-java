@@ -146,6 +146,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P133_CloneGraph.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P133_CloneGraph.md" />
+              <option name="frontendQuestionId" value="leetcode.com133" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P133_CloneGraph.java" />
+              <option name="titleSlug" value="clone-graph" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P135_Candy.java">
           <value>
             <LeetcodeEditor>
@@ -176,6 +187,39 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P146_LruCache.java" />
               <option name="titleSlug" value="lru-cache" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P150_EvaluateReversePolishNotation.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P150_EvaluateReversePolishNotation.md" />
+              <option name="frontendQuestionId" value="leetcode.com150" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P150_EvaluateReversePolishNotation.java" />
+              <option name="titleSlug" value="evaluate-reverse-polish-notation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P151_ReverseWordsInAString.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P151_ReverseWordsInAString.md" />
+              <option name="frontendQuestionId" value="leetcode.com151" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P151_ReverseWordsInAString.java" />
+              <option name="titleSlug" value="reverse-words-in-a-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P155_MinStack.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P155_MinStack.md" />
+              <option name="frontendQuestionId" value="leetcode.com155" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P155_MinStack.java" />
+              <option name="titleSlug" value="min-stack" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -212,6 +256,39 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P189_RotateArray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P189_RotateArray.md" />
+              <option name="frontendQuestionId" value="leetcode.com189" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P189_RotateArray.java" />
+              <option name="titleSlug" value="rotate-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P198_HouseRobber.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P198_HouseRobber.md" />
+              <option name="frontendQuestionId" value="leetcode.com198" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P198_HouseRobber.java" />
+              <option name="titleSlug" value="house-robber" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P199_BinaryTreeRightSideView.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P199_BinaryTreeRightSideView.md" />
+              <option name="frontendQuestionId" value="leetcode.com199" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P199_BinaryTreeRightSideView.java" />
+              <option name="titleSlug" value="binary-tree-right-side-view" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P206_ReverseLinkedList.java">
           <value>
             <LeetcodeEditor>
@@ -220,6 +297,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P206_ReverseLinkedList.java" />
               <option name="titleSlug" value="reverse-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P210_CourseScheduleIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P210_CourseScheduleIi.md" />
+              <option name="frontendQuestionId" value="leetcode.com210" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P210_CourseScheduleIi.java" />
+              <option name="titleSlug" value="course-schedule-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -253,6 +341,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P222_CountCompleteTreeNodes.java" />
               <option name="titleSlug" value="count-complete-tree-nodes" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P224_BasicCalculator.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P224_BasicCalculator.md" />
+              <option name="frontendQuestionId" value="leetcode.com224" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P224_BasicCalculator.java" />
+              <option name="titleSlug" value="basic-calculator" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -322,6 +421,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P279_PerfectSquares.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P279_PerfectSquares.md" />
+              <option name="frontendQuestionId" value="leetcode.com279" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P279_PerfectSquares.java" />
+              <option name="titleSlug" value="perfect-squares" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P3007_MaximumNumberThatSumOfThePricesIsLessThanOrEqualToK.java">
           <value>
             <LeetcodeEditor>
@@ -341,6 +451,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P300_LongestIncreasingSubsequence.java" />
               <option name="titleSlug" value="longest-increasing-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P322_CoinChange.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P322_CoinChange.md" />
+              <option name="frontendQuestionId" value="leetcode.com322" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P322_CoinChange.java" />
+              <option name="titleSlug" value="coin-change" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -476,6 +597,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P55_JumpGame.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P55_JumpGame.md" />
+              <option name="frontendQuestionId" value="leetcode.com55" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P55_JumpGame.java" />
+              <option name="titleSlug" value="jump-game" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P56_MergeIntervals.java">
           <value>
             <LeetcodeEditor>
@@ -495,6 +627,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P57_InsertInterval.java" />
               <option name="titleSlug" value="insert-interval" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P585_InvestmentsIn2016.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P585_InvestmentsIn2016.md" />
+              <option name="frontendQuestionId" value="leetcode.com585" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P585_InvestmentsIn2016.java" />
+              <option name="titleSlug" value="investments-in-2016" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -542,6 +685,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P71_SimplifyPath.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P71_SimplifyPath.md" />
+              <option name="frontendQuestionId" value="leetcode.com71" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P71_SimplifyPath.java" />
+              <option name="titleSlug" value="simplify-path" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P752_OpenTheLock.java">
           <value>
             <LeetcodeEditor>
@@ -572,6 +726,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P797_AllPathsFromSourceToTarget.java" />
               <option name="titleSlug" value="all-paths-from-source-to-target" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P80_RemoveDuplicatesFromSortedArrayIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/doc/content/P80_RemoveDuplicatesFromSortedArrayIi.md" />
+              <option name="frontendQuestionId" value="leetcode.com80" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/en/P80_RemoveDuplicatesFromSortedArrayIi.java" />
+              <option name="titleSlug" value="remove-duplicates-from-sorted-array-ii" />
             </LeetcodeEditor>
           </value>
         </entry>

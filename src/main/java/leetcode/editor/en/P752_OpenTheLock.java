@@ -77,7 +77,7 @@ public class P752_OpenTheLock {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new P752_OpenTheLock().new Solution();
-        System.out.println(solution.openLock(new String[]{"8887","8889","8878","8898","8788","8988","7888","9888"}, "8888"));
+        System.out.println(solution.openLock(new String[]{"0201","0101","0102","1212","2002"}, "0202"));
     }
 
     //力扣代码

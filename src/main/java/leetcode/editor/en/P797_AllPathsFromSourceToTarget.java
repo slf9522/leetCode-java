@@ -52,6 +52,7 @@ public class P797_AllPathsFromSourceToTarget {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new P797_AllPathsFromSourceToTarget().new Solution();
+        System.out.println(solution.allPathsSourceTarget(new int[][]{{1,2},{3},{3},{}}));
     }
 
     //力扣代码
@@ -60,28 +61,26 @@ public class P797_AllPathsFromSourceToTarget {
         List<List<Integer>> res = new LinkedList<>();
 
         public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+
             LinkedList<Integer> path = new LinkedList<>();
-            traverse(graph, 0, path);
+            dfs(graph, 0, path);
             return res;
         }
 
-        private void traverse(int[][] graph, int i, LinkedList<Integer> path) {
-            path.addLast(i);
-
-            if (i == graph.length - 1) {
+        private void dfs(int[][] graph, int start, LinkedList<Integer> path) {
+            if (start == graph.length - 1) {
+                path.addLast(start);
                 res.add(new LinkedList<>(path));
-                //每次从遍历中回溯需要remove
                 path.removeLast();
                 return;
             }
 
-            int[] neighbors = graph[i];
-            for (int j = 0; j < neighbors.length; j++) {
-                traverse(graph, neighbors[j], path);
+            for (int i = 0; i < graph[start].length; i++) {
+                path.addLast(start);
+                Integer next = graph[start][i];
+                dfs(graph, next, path);
+                path.removeLast();
             }
-
-            path.removeLast();
-
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
