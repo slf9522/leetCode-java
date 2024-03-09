@@ -74,7 +74,6 @@
 
 package leetcode.editor.en;
 
-import org.checkerframework.checker.units.qual.A;
 
 import java.util.*;
 
@@ -121,12 +120,12 @@ class Node {
             return dfs(node, lookup);
         }
 
-        private Node dfs(Node node, Map<Node,Node> lookup) {
+        private Node dfs(Node node, Map<Node, Node> lookup) {
             if (node == null) return null;
             if (lookup.containsKey(node)) return lookup.get(node);
             Node clone = new Node(node.val, new ArrayList<>());
             lookup.put(node, clone);
-            for (Node n : node.neighbors)clone.neighbors.add(dfs(n,lookup));
+            for (Node n : node.neighbors) clone.neighbors.add(dfs(n, lookup));
             return clone;
         }
     }

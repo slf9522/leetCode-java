@@ -1,72 +1,73 @@
 package leetcode.editor.interview;
 
 import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Weiruan3 {
     public static void main(String[] args) {
-        // 把stream和iterator的操作熟悉了
 
-        Iterator<Integer> iter = IntStream.iterate(0, i -> i + 2).iterator();
-        while (iter.hasNext()) {
-            System.out.println(iter.next());
+        Iterator<Integer> iter = IntStream.iterate(0, i -> i + 1).limit(10).iterator();
+        Buffer buffer = new Buffer();
+        IterImpl i1 = new IterImpl(iter, buffer);
+        IterImpl i2 = new IterImpl(iter, buffer);
+        while(i1.hasNext() || i2.hasNext()){
+            System.out.println(i1.next());
+            System.out.println(i2.next());
         }
     }
 
-    void process(Iterator iter) {
 
-    }
+    static class IterImpl implements Iterator<Integer> {
 
-    // java iterator
-    public static List<Iter> getIterator(Iter input) {
-        return null;
-    }
-
-    interface Iter {
-        boolean hasNext();
-
-        int next();
-    }
-
-    class IterImpl implements Iter {
-
-        Iter input;
+        Iterator<Integer> input;
         int cnt = 0;
 
         Buffer bf;
 
-        public IterImpl(Iter iter, Buffer buffer) {
+        public IterImpl(Iterator<Integer> iter, Buffer buffer) {
             input = iter;
             bf = buffer;
         }
 
         @Override
         public boolean hasNext() {
-            return true;
+            if (cnt < bf.maxSize) {
+                return true;
+            } else {
+                return this.input.hasNext();
+            }
         }
 
         @Override
-        public int next() {
-            if (cnt > bf.cnt) {
-                int val = input.next();
-                bf.bf[++bf.cnt] = val;
-                return val;
+        public Integer next() {
+            if (cnt < bf.maxSize) {
+                cnt++;
+                return bf.bq.poll();
             } else {
-                int val = bf.bf[cnt++];
-                return val;
+                if (this.input.hasNext()) {
+                    cnt++;
+                    int val = this.input.next();
+                    bf.add(val);
+                    return val;
+                }
+                return null;
             }
         }
     }
 
-    class Buffer {
-        int[] bf;
+    static class Buffer {
+        ArrayBlockingQueue<Integer> bq = new ArrayBlockingQueue<>(100);
+        int maxSize = 0;
 
-        // total count
-        int cnt;
+        public Buffer() {
 
-        int size;
+        }
 
-        int window;
+        public synchronized void add(int ele) {
+            bq.offer(ele);
+            maxSize++;
+        }
     }
 }
