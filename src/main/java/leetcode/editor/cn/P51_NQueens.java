@@ -40,26 +40,36 @@
 
 package leetcode.editor.cn;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * N 皇后
+ *
  * @author JX
  * @date 2024-03-10 15:43:39
  */
-public class P51_NQueens{
-	 public static void main(String[] args) {
-	 	 //测试代码
-	 	 Solution solution = new P51_NQueens().new Solution();
-	 }
-	 
-//力扣代码
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<List<String>> solveNQueens(int n) {
-
+public class P51_NQueens {
+    public static void main(String[] args) {
+        //测试代码
+        Solution solution = new P51_NQueens().new Solution();
     }
-}
+
+    //力扣代码
+//leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        List<List<String>> res = new LinkedList<>();
+        public List<List<String>> solveNQueens(int n) {
+            boolean[] row = new boolean[n];
+            boolean[] col = new boolean[n];
+            backTrace(row, col, new LinkedList<>());
+            return res;
+        }
+
+        private void backTrace(boolean[] row, boolean[] col, LinkedList<Object> path) {
+
+        }
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P1003_CheckIfWordIsValidAfterSubstitutions.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P1003_CheckIfWordIsValidAfterSubstitutions.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1003" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P1003_CheckIfWordIsValidAfterSubstitutions.java" />
+              <option name="titleSlug" value="check-if-word-is-valid-after-substitutions" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P103_BinaryTreeZigzagLevelOrderTraversal.java">
           <value>
             <LeetcodeEditor>
@@ -55,6 +66,28 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P120_Triangle.java" />
               <option name="titleSlug" value="triangle" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P121_BestTimeToBuyAndSellStock.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P121_BestTimeToBuyAndSellStock.md" />
+              <option name="frontendQuestionId" value="leetcode.cn121" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P121_BestTimeToBuyAndSellStock.java" />
+              <option name="titleSlug" value="best-time-to-buy-and-sell-stock" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P123_BestTimeToBuyAndSellStockIii.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P123_BestTimeToBuyAndSellStockIii.md" />
+              <option name="frontendQuestionId" value="leetcode.cn123" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P123_BestTimeToBuyAndSellStockIii.java" />
+              <option name="titleSlug" value="best-time-to-buy-and-sell-stock-iii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -102,6 +135,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P20_ValidParentheses.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P20_ValidParentheses.md" />
+              <option name="frontendQuestionId" value="leetcode.cn20" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P20_ValidParentheses.java" />
+              <option name="titleSlug" value="valid-parentheses" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P224_BasicCalculator.java">
           <value>
             <LeetcodeEditor>
@@ -110,6 +154,28 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P224_BasicCalculator.java" />
               <option name="titleSlug" value="basic-calculator" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P236_LowestCommonAncestorOfABinaryTree.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P236_LowestCommonAncestorOfABinaryTree.md" />
+              <option name="frontendQuestionId" value="leetcode.cn236" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P236_LowestCommonAncestorOfABinaryTree.java" />
+              <option name="titleSlug" value="lowest-common-ancestor-of-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P309_BestTimeToBuyAndSellStockWithCooldown.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P309_BestTimeToBuyAndSellStockWithCooldown.md" />
+              <option name="frontendQuestionId" value="leetcode.cn309" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P309_BestTimeToBuyAndSellStockWithCooldown.java" />
+              <option name="titleSlug" value="best-time-to-buy-and-sell-stock-with-cooldown" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -146,6 +212,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P41_FirstMissingPositive.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P41_FirstMissingPositive.md" />
+              <option name="frontendQuestionId" value="leetcode.cn41" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P41_FirstMissingPositive.java" />
+              <option name="titleSlug" value="first-missing-positive" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P42_TrappingRainWater.java">
           <value>
             <LeetcodeEditor>
@@ -165,6 +242,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P438_FindAllAnagramsInAString.java" />
               <option name="titleSlug" value="find-all-anagrams-in-a-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P442_FindAllDuplicatesInAnArray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P442_FindAllDuplicatesInAnArray.md" />
+              <option name="frontendQuestionId" value="leetcode.cn442" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P442_FindAllDuplicatesInAnArray.java" />
+              <option name="titleSlug" value="find-all-duplicates-in-an-array" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -234,6 +322,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P53_MaximumSubarray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P53_MaximumSubarray.md" />
+              <option name="frontendQuestionId" value="leetcode.cn53" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P53_MaximumSubarray.java" />
+              <option name="titleSlug" value="maximum-subarray" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P54_SpiralMatrix.java">
           <value>
             <LeetcodeEditor>
@@ -242,6 +341,50 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P54_SpiralMatrix.java" />
               <option name="titleSlug" value="spiral-matrix" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P56_MergeIntervals.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P56_MergeIntervals.md" />
+              <option name="frontendQuestionId" value="leetcode.cn56" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P56_MergeIntervals.java" />
+              <option name="titleSlug" value="merge-intervals" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P912_SortAnArray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P912_SortAnArray.md" />
+              <option name="frontendQuestionId" value="leetcode.cn912" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P912_SortAnArray.java" />
+              <option name="titleSlug" value="sort-an-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P94_BinaryTreeInorderTraversal.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P94_BinaryTreeInorderTraversal.md" />
+              <option name="frontendQuestionId" value="leetcode.cn94" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P94_BinaryTreeInorderTraversal.java" />
+              <option name="titleSlug" value="binary-tree-inorder-traversal" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P994_RottingOranges.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/P994_RottingOranges.md" />
+              <option name="frontendQuestionId" value="leetcode.cn994" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/P994_RottingOranges.java" />
+              <option name="titleSlug" value="rotting-oranges" />
             </LeetcodeEditor>
           </value>
         </entry>
