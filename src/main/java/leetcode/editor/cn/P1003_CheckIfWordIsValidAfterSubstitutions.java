@@ -50,6 +50,9 @@
 
 package leetcode.editor.cn;
 
+import java.util.LinkedList;
+import java.util.Stack;
+
 /**
  * 检查替换后的词是否有效
  *
@@ -60,13 +63,49 @@ public class P1003_CheckIfWordIsValidAfterSubstitutions {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new P1003_CheckIfWordIsValidAfterSubstitutions().new Solution();
+        System.out.println(solution.isValid("aaabc"));
     }
 
     //力扣代码
 //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean isValid(String s) {
+            LinkedList<Character> stack = new LinkedList<>();
 
+            boolean flag = true;
+            for (int i = 0; i < s.length(); i++) {
+                char c = s.charAt(i);
+                if (stack.size() == 0) {
+                    if (c != 'a') {
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if (c == 'a') {
+                    stack.addLast(c);
+                } else if (c == 'b') {
+                    if (stack.peekLast() != 'a') {
+                        flag = false;
+                        break;
+                    }
+                    stack.addLast(c);
+                } else if (c == 'c') {
+                    stack.addLast(c);
+                    flag = checkAndPop(stack);
+                    if (!flag) return false;
+                }
+            }
+            return flag && stack.size()==0;
+        }
+
+        private boolean checkAndPop(LinkedList<Character> stack) {
+            if (stack.isEmpty()) return true;
+            if (!stack.isEmpty() && stack.peekLast() != 'c') return true;
+            if (!stack.isEmpty() && stack.peekLast() == 'c' && stack.size() < 3) return false;
+            boolean flag = (stack.pollLast() == 'c') && (stack.pollLast() == 'b') && (stack.pollLast() == 'a');
+            if (!flag) return false;
+            return checkAndPop(stack);
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
